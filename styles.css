@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title-section span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 30px;
+  color: red;
+}
+
+/* NAVBAR */
+header {
+  z-index: 10;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover {
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 50px;
+}
+
+/* ABOUT SECTION */
+#about {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.image_container_about {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  max-width: 100%;
+}
+
+.right_container_about {
+  padding: 20px 15px;
+  width: 40%;
+}
+
+.artist_about {
+  margin-bottom: 15px;
+}
+
+.hero_name {
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+}
+
+.first_name {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 50px;
+  font-style: italic;
+  line-height: 30px;
+  color: red;
+}
+
+.artist_about p {
+  color: rgb(99, 99, 99);
+  max-width: 470px;
+}
+
+.artist_contact {
+  display: flex;
+  gap: 10px;
+}
+
+.artist_contact a {
+  color: rgb(99, 99, 99);
+}
+
+.fa-spotify:hover {
+  color: #1db954;
+}
+
+.fa-itunes:hover {
+  color: #007aff;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
+}
+
+/* JOURNEY SECTION */
+#journey {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.grid-content {
+  padding: 0px 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.image-story-container {
+  height: 100%;
+  width: 150px;
+}
+
+.image-story {
+  width: 150px;
+  height: 100%;
+  filter: grayscale();
+  object-fit: cover;
+}
+
+.explanation {
+  height: 100%;
+}
+
+.explanation h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.explanation p {
+  color: rgb(99, 99, 99);
+  font-size: 14px;
+}
+
+.article:hover .image-story {
+  filter: none;
+}
+
+.article:hover h2 {
+  color: red;
+}
+
+.article:hover {
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
+}
+
+/* ALBUMS SECTION */
+#albums {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.flex-content {
+  margin: auto;
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.album {
+  width: 200px;
+  margin: 20px;
+}
+
+.albums-image {
+  width: 200px;
+}
+
+.album-text {
+  padding: 4px 0;
+}
+
+.album h3 {
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.album p {
+  font-size: 12px;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.creator h3 {
+  font-weight: 300;
+}
+
+.creator a {
+  text-decoration: none;
+  color: black;
+}
+
+.extra-info {
+  text-align: center;
+}
+
+.extra-info h3 {
+  font-weight: 300;
+}
+
+.extra-info a {
+  font-weight: 300;
+  color: red;
+  text-decoration: none;
+}
+
+.collab-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.collab-container h3 {
+  text-align: end;
+}
+
+.input-submit {
+  display: flex;
+  gap: 5px;
+}
+
+.input-submit input {
+  width: 140px;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.input-submit input:focus {
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.input-submit button {
+  color: grey;
+  width: 60px;
+  background-color: transparent;
+  border: 2px solid grey;
+}
+
+.input-submit button:hover {
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+@media (max-width: 900px) {
+  /* JOURNEY SECTION */
+  .article {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+  .image-story-container {
+    width: 100%;
+    height: 150px;
+  }
+
+  .image-story {
+    width: 100%;
+    height: 150px;
+    object-position: top;
+    object-fit: cover;
+  }
+
+  /* FOOTER SECTION */
+  footer {
+    margin: 40px auto;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .collab-container h3 {
+    text-align: center;
+  }
+
+  .input-submit {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ABOUT SECTION */
+  #about {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image_container_about {
+    width: 100%;
+    height: 62%;
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .right_container_about {
+    padding: 20px 0px;
+    width: 100%;
+    height: 38%;
+  }
+
+  .artist_about {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .hero_name {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first_name {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 35px;
+    font-style: italic;
+    line-height: 25px;
+    color: red;
+  }
+
+  .artist_about p {
+    font-size: 12px;
+    max-width: 300px;
+  }
+
+  .p-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .artist_contact {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .artist_contact a {
+    color: black;
+  }
+
+  .artist_contact a:hover {
+    opacity: 0.6;
+  }
+
+  /* JOURNEY SECTION */
+  .explanation h2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .explanation p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* JOURNEY SECTION */
+  .grid-content {
+    grid-template-columns: 100%;
+  }
+}
